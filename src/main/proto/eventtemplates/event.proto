@@ -24,5 +24,5 @@ option java_multiple_files = true;
 
 message Event {
   CommonTemplate common_template = 1;
-  optional VideoEventTemplate video_event_template = 2;
+  VideoEventTemplate video_event_template = 2;
 }
