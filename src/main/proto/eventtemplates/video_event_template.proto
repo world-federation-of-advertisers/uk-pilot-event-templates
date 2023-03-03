@@ -1,0 +1,44 @@
+// Copyright 2023 The Cross-Media Measurement Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package eventtemplates;
+
+import "wfa/measurement/api/v2alpha/event_annotations.proto";
+
+option java_package = "eventtemplates";
+option java_multiple_files = true;
+
+message VideoEventTemplate {
+  option (.wfa.measurement.api.v2alpha.event_template) = {
+    name: "video_event_template"
+    display_name: "Video Ad"
+    description: "An Event Template for video ad events."
+  };
+
+  // Measures the percentage of a video ad that was viewed.
+  message DigitalVideoCompletionStatus {
+    uint32 completed_0_percent_plus = 1;
+
+    uint32 completed_25_percent = 2;
+
+    uint32 completed_50_percent = 3;
+
+    uint32 completed_75_percent = 4;
+
+    uint32 completed_100_percent = 5;
+  }
+  DigitalVideoCompletionStatus digital_video_completion_status = 1;
+}

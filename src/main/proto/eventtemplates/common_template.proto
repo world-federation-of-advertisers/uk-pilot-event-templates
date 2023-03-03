@@ -1,0 +1,50 @@
+// Copyright 2023 The Cross-Media Measurement Authors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package eventtemplates;
+
+import "wfa/measurement/api/v2alpha/event_annotations.proto";
+
+option java_package = "eventtemplates";
+option java_multiple_files = true;
+
+message CommonTemplate {
+  option (.wfa.measurement.api.v2alpha.event_template) = {
+    name: "common_template"
+    display_name: "Common Template"
+    description: "A common base template for Origin Event filtering."
+  };
+
+  message Viewability {
+    option (.wfa.measurement.api.v2alpha.event_field) = {
+      display_name: "Viewability"
+    };
+
+    // Whether viewability was able to be measured in the event.
+    uint32 measurable = 1;
+
+    // More than 50% of the ad was displayed in the browser for 1 second for
+    // display ads or 2 seconds for video ads. Aka the MRC viewable
+    // definition.
+    uint32 viewable_50_percent_plus = 2;
+
+    // 100% of the ad was displayed in the browser for at least 1 second for
+    // display ads or 2 seconds for video ads.
+    uint32 viewable_100_percent = 3;
+  }
+
+  Viewability viewability = 1;
+}

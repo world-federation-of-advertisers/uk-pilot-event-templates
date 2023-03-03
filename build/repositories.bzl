@@ -13,13 +13,13 @@
 # limitations under the License.
 
 """
-Adds external repos necessary for us_pilot_event_templates.
+Adds external repos necessary for uk_pilot_event_templates.
 """
 
 load("//build/wfa:repositories.bzl", "wfa_repo_archive")
 
-def us_pilot_event_templates_repositories():
-    """Imports all direct dependencies for us_pilot_event_templates."""
+def uk_pilot_event_templates_repositories():
+    """Imports all direct dependencies for uk_pilot_event_templates."""
 
     wfa_repo_archive(
         name = "wfa_measurement_proto",
