@@ -36,7 +36,7 @@ message CommonTemplate {
     enum Value {
       // More than 0% of the ad was displayed in the browser for at least 1
       // second for display ads or at least 2 seconds for video ads.
-      VIEWABLE_0_PERCENT_PLUS = 1;
+      0_PERCENT_PLUS = 1;
       // More than 50% of the ad was displayed in the browser for at least 1
       // second for display ads or at least 2 seconds for video ads.
       // AKA Old MRC Viewability standard
