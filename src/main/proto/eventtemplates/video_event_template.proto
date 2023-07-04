@@ -31,7 +31,7 @@ message VideoEventTemplate {
   // Measures the percentage of a video ad that was viewed.
   message DigitalVideoCompletionStatus {
     option (.wfa.measurement.api.v2aplha.event_field) = {
-      display_name = "DigitalVideoCompletionStatus"
+      display_name: "DigitalVideoCompletionStatus"
     };
     enum Value {
       COMPLETED_0_PERCENT_PLUS = 1;
