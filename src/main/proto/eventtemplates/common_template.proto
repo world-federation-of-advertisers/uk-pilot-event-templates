@@ -32,7 +32,6 @@ message CommonTemplate {
     option (.wfa.measurement.api.v2alpha.event_field) = {
       display_name: "Viewability"
     };
-    
     enum Value {
       VIEWABLE_UNDEFINED = 0;
       // More than 0% of the ad was displayed in the browser for at least 1
@@ -49,6 +48,5 @@ message CommonTemplate {
     }
     Value value = 1;
   }
-
   Viewability viewability = 1;
 }
