@@ -34,6 +34,7 @@ message VideoEventTemplate {
       display_name: "DigitalVideoCompletionStatus"
     };
     enum Value {
+      COMPLETED_UNDEFINED = 0;
       COMPLETED_0_PERCENT_PLUS = 1;
       COMPLETED_25_PERCENT_PLUS = 2;
       COMPLETED_50_PERCENT_PLUS = 3;

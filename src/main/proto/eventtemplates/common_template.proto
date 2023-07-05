@@ -34,6 +34,7 @@ message CommonTemplate {
     };
     
     enum Value {
+      VIEWABLE_UNDEFINED = 0;
       // More than 0% of the ad was displayed in the browser for at least 1
       // second for display ads or at least 2 seconds for video ads.
       ZERO_PERCENT_PLUS = 1;
