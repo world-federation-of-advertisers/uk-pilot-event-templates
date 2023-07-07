@@ -29,9 +29,6 @@ message Common {
   };
 
   message Viewability {
-    option (.wfa.measurement.api.v2alpha.template_field) = {
-      display_name: "Viewability"
-    };
 
       // More than 0% of the ad was displayed in the browser for at least 1
       // second for display ads or at least 2 seconds for video ads.
