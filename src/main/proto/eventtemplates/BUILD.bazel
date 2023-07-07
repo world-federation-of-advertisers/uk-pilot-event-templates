@@ -8,7 +8,7 @@ IMPORT_PREFIX = "/src/main/proto"
 
 proto_library(
     name = "event_templates_proto",
-    srcs = glob(["*template.proto"]),
+    srcs = glob(["*.proto"]),
     strip_import_prefix = IMPORT_PREFIX,
     deps = [
         "@com_google_protobuf//:descriptor_proto",
@@ -16,9 +16,3 @@ proto_library(
     ],
 )
 
-proto_library(
-    name = "event_proto",
-    srcs = ["event.proto"],
-    strip_import_prefix = IMPORT_PREFIX,
-    deps = [":event_templates_proto"],
-)
