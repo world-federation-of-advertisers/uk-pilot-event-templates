@@ -14,34 +14,20 @@
 
 syntax = "proto3";
 
-package eventtemplates;
+package halo_cmm.uk.pilot;
 
 import "wfa/measurement/api/v2alpha/event_annotations.proto";
 
-option java_package = "eventtemplates";
+option java_package = "org.halo_cmm.uk.pilot";
 option java_multiple_files = true;
 
-message VideoEventTemplate {
+message DisplayEvent {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "video_event_template"
-    display_name: "Video Ad"
-    description: "An Event Template for video ad events."
+    name: "display_event"
+    display_name: "Display Ad"
+    description: "An Event Template for display ad events."
   };
 
-  // Measures the percentage of a video ad that was viewed.
-  message DigitalVideoCompletionStatus {
-    option (.wfa.measurement.api.v2alpha.event_field) = {
-      display_name: "DigitalVideoCompletionStatus"
-    };
-    enum Value {
-      COMPLETED_UNDEFINED = 0;
-      COMPLETED_0_PERCENT_PLUS = 1;
-      COMPLETED_25_PERCENT_PLUS = 2;
-      COMPLETED_50_PERCENT_PLUS = 3;
-      COMPLETED_75_PERCENT_PLUS = 4;
-      COMPLETED_100_PERCENT = 5;
-    }
-    Value value = 1;
-  }
-  DigitalVideoCompletionStatus digital_video_completion_status = 1;
+  // No fields for now - need to confirm with stakeholders.
+
 }

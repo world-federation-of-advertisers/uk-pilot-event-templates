@@ -14,39 +14,36 @@
 
 syntax = "proto3";
 
-package eventtemplates;
+package halo_cmm.uk.pilot;
 
 import "wfa/measurement/api/v2alpha/event_annotations.proto";
 
-option java_package = "eventtemplates";
+option java_package = "org.halo_cmm.uk.pilot";
 option java_multiple_files = true;
 
-message CommonTemplate {
+message Common {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "common_template"
+    name: "common"
     display_name: "Common Template"
     description: "A common base template for Origin Event filtering."
   };
 
   message Viewability {
-    option (.wfa.measurement.api.v2alpha.event_field) = {
+    option (.wfa.measurement.api.v2alpha.template_field) = {
       display_name: "Viewability"
     };
-    enum Value {
-      VIEWABLE_UNDEFINED = 0;
+
       // More than 0% of the ad was displayed in the browser for at least 1
       // second for display ads or at least 2 seconds for video ads.
-      ZERO_PERCENT_PLUS = 1;
+      bool zero_percent_plus = 1;
       // More than 50% of the ad was displayed in the browser for at least 1
       // second for display ads or at least 2 seconds for video ads.
       // AKA Old MRC Viewability standard
-      VIEWABLE_50_PERCENT_PLUS = 2;
+      bool viewable_50_percent_plus = 2;
       // 100% of the ad was displayed in the browser for at least 1
       // second for display ads or at least 2 seconds for video ads.
       // AKA New MRC Viewability standard
-      VIEWABLE_100_PERCENT = 3;
-    }
-    Value value = 1;
+      bool viewable_100_percent = 3;
   }
   Viewability viewability = 1;
 }
