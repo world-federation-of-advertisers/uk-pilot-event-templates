@@ -36,6 +36,5 @@ message VideoEvent {
     bool completed_75_percent_plus = 4;
     bool completed_100_percent = 5;
   }
-  
   DigitalVideoCompletionStatus digital_video_completion_status = 1;
 }

@@ -27,7 +27,4 @@ message DisplayEvent {
     display_name: "Display Ad"
     description: "An Event Template for display ad events."
   };
-
-  // No fields for now - need to confirm with stakeholders.
-
 }

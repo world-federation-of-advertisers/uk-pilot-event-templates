@@ -41,6 +41,5 @@ message Common {
     // AKA New MRC Viewability standard
     bool viewable_100_percent = 3;
   }
-  
   Viewability viewability = 1;
 }
