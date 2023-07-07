@@ -30,7 +30,7 @@ message VideoEvent {
 
   // Measures the percentage of a video ad that was viewed.
   message DigitalVideoCompletionStatus {
-      bool completed_0_percent_plus = 1 [(.wfa.measurement.api.v2alpha.template_field).display_name = "Field1"];
+      bool completed_0_percent_plus = 1;
       bool completed_25_percent_plus = 2;
       bool comepleted_50_percent_plus = 3;
       bool completed_75_percent_plus = 4;
