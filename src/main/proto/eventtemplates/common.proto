@@ -27,5 +27,4 @@ message Common {
     display_name: "Common Template"
     description: "A common base template for Origin Event filtering."
   };
-
 }
