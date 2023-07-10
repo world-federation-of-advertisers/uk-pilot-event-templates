@@ -15,4 +15,3 @@ proto_library(
         "@wfa_measurement_proto//src/main/proto/wfa/measurement/api/v2alpha:event_annotations_proto",
     ]
 )
-
