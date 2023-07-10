@@ -38,10 +38,9 @@ message VideoEvent {
   }
   DigitalVideoCompletionStatus digital_video_completion_status = 1;
 
-  
   message Viewability {
     // More than 0% of the ad was displayed in the browser for more than
-    //0 seconds.
+    // 0 seconds.
     bool zero_percent_plus = 1;
     // More than 50% of the ad was displayed in the browser for at least
     // 2 seconds.

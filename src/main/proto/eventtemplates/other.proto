@@ -27,5 +27,4 @@ message Other {
     display_name: "Other Media Type Template"
     description: "A template for other media types for Origin Event filtering."
   };
-
 }
