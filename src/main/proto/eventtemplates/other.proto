@@ -21,11 +21,11 @@ import "wfa/measurement/api/v2alpha/event_annotations.proto";
 option java_package = "org.halo_cmm.uk.pilot";
 option java_multiple_files = true;
 
-message Common {
+message Other {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "common"
-    display_name: "Common Template"
-    description: "A common base template for Origin Event filtering."
+    name: "other"
+    display_name: "Other Media Type Template"
+    description: "A template for other media types for Origin Event filtering."
   };
 
 }

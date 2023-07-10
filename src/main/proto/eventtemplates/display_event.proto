@@ -27,4 +27,16 @@ message DisplayEvent {
     display_name: "Display Ad"
     description: "An Event Template for display ad events."
   };
+
+  message Viewability {
+    // More than 0% of the ad was displayed in the browser for at least 1 second.
+    bool zero_percent_plus = 1;
+    // More than 50% of the ad was displayed in the browser for at least 1 second.
+    // AKA Old MRC Viewability standard
+    bool viewable_50_percent_plus = 2;
+    // 100% of the ad was displayed in the browser for at least 1 second.
+    // AKA New MRC Viewability standard
+    bool viewable_100_percent = 3;
+  }
+  Viewability viewability = 1;
 }

@@ -37,4 +37,16 @@ message VideoEvent {
     bool completed_100_percent = 5;
   }
   DigitalVideoCompletionStatus digital_video_completion_status = 1;
+
+  message Viewability {
+    // More than 0% of the ad was displayed in the browser for at least 2 seconds.
+    bool zero_percent_plus = 1;
+    // More than 50% of the ad was displayed in the browser for at least 2 seconds.
+    // AKA Old MRC Viewability standard
+    bool viewable_50_percent_plus = 2;
+    // 100% of the ad was displayed in the browser for at least 2 seconds.
+    // AKA New MRC Viewability standard
+    bool viewable_100_percent = 3;
+  }
+  Viewability viewability = 2;
 }
