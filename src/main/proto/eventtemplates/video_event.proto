@@ -17,6 +17,7 @@ syntax = "proto3";
 package halo_cmm.uk.pilot;
 
 import "wfa/measurement/api/v2alpha/event_annotations.proto";
+import "eventtemplates/common.proto";
 
 option java_package = "org.halo_cmm.uk.pilot";
 option java_multiple_files = true;
@@ -36,20 +37,21 @@ message VideoEvent {
     bool completed_75_percent_plus = 4;
     bool completed_100_percent = 5;
   }
-  DigitalVideoCompletionStatus digital_video_completion_status = 1;
 
   message Viewability {
     // More than 0% of the ad was displayed in the browser for more than
     // 0 seconds.
     bool zero_percent_plus = 1;
     // More than 50% of the ad was displayed in the browser for at least
-    // 2 seconds.
+    // 2 continuous seconds.
     // AKA Old MRC Viewability standard
     bool viewable_50_percent_plus = 2;
     // 100% of the ad was displayed in the browser for at least
-    // 2 seconds.
+    // 2 continuous seconds.
     // AKA New MRC Viewability standard
     bool viewable_100_percent = 3;
   }
+  Common common = 1;
   Viewability viewability = 2;
+  DigitalVideoCompletionStatus digital_video_completion_status = 3;
 }
