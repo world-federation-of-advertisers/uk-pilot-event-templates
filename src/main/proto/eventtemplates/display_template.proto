@@ -21,7 +21,7 @@ import "wfa/measurement/api/v2alpha/event_annotations.proto";
 option java_package = "org.halo_cmm.uk.pilot";
 option java_multiple_files = true;
 
-message DisplayEvent {
+message Display {
   option (.wfa.measurement.api.v2alpha.event_template) = {
     name: "display_template"
     display_name: "Display Ad"
