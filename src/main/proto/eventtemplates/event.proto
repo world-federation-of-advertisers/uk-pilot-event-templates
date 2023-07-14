@@ -28,5 +28,5 @@ message Event {
     Common common = 1;
     VideoEvent videoevent = 2;
     DisplayEvent displayevent = 3;
-    Other other = 4:
+    Other other = 4;
 }

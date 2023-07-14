@@ -21,35 +21,24 @@ import "wfa/measurement/api/v2alpha/event_annotations.proto";
 option java_package = "org.halo_cmm.uk.pilot";
 option java_multiple_files = true;
 
-message VideoEvent {
+message DisplayEvent {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "video_event"
-    display_name: "Video Ad"
-    description: "An Event Template for video ad events."
+    name: "display_template"
+    display_name: "Display Ad"
+    description: "An Event Template for display ad events."
   };
-
-  // Measures the percentage of a video ad that was viewed.
-  message DigitalVideoCompletionStatus {
-    bool completed_0_percent_plus = 1;
-    bool completed_25_percent_plus = 2;
-    bool comepleted_50_percent_plus = 3;
-    bool completed_75_percent_plus = 4;
-    bool completed_100_percent = 5;
-  }
 
   message Viewability {
     // More than 0% of the ad was displayed in the browser for more than
     // 0 seconds.
     bool zero_percent_plus = 1;
     // More than 50% of the ad was displayed in the browser for at least
-    // 2 continuous seconds.
-    // AKA Old MRC Viewability standard
+    // 1 continuous second.
+    // AKA MRC Viewability standard
     bool viewable_50_percent_plus = 2;
     // 100% of the ad was displayed in the browser for at least
-    // 2 continuous seconds.
-    // AKA New MRC Viewability standard
+    // 1 continous second.
     bool viewable_100_percent = 3;
   }
   Viewability viewability = 1;
-  DigitalVideoCompletionStatus digital_video_completion_status = 2;
 }
