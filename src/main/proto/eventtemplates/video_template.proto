@@ -23,9 +23,9 @@ option java_multiple_files = true;
 
 message Video {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "video_template"
-    display_name: "Video Ad"
-    description: "An Event Template for video ad events."
+    name : "video_template"
+    display_name : "Video Ad"
+    description : "An Event Template for video ad events."
   };
 
   // Measures the percentage of a video ad that was viewed.
