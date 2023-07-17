@@ -31,7 +31,7 @@ message Display {
   message Viewability {
     // More than 0% of the ad was displayed in the browser for more than
     // 0 seconds.
-    bool viewable_0ß_percent_plus = 1;
+    bool viewable_0_percent_plus = 1;
     // More than 50% of the ad was displayed in the browser for at least
     // 1 continuous second.
     // AKA MRC Viewability standard
