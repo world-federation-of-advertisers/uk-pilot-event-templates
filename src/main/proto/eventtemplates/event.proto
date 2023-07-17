@@ -16,7 +16,7 @@ syntax = "proto3";
 
 package halo_cmm.uk.pilot;
 
-import "eventtemplates/common.proto";
+import "eventtemplates/common_template.proto";
 import "eventtemplates/display_template.proto";
 import "eventtemplates/video_template.proto";
 import "eventtemplates/other_template.proto";
