@@ -23,7 +23,7 @@ option java_multiple_files = true;
 
 message Other {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "other"
+    name: "Other"
     display_name: "Other Media Type Template"
     description: "A template for other media types for Origin Event filtering."
   };

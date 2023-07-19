@@ -23,7 +23,7 @@ option java_multiple_files = true;
 
 message Common {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "common"
+    name: "Common"
     display_name: "Common Template"
     description: "A common base template for Origin Event filtering."
   };
