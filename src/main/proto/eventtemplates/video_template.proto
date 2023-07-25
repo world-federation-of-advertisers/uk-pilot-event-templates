@@ -32,7 +32,7 @@ message Video {
   message DigitalVideoCompletionStatus {
     bool completed_0_percent_plus = 1;
     bool completed_25_percent_plus = 2;
-    bool comepleted_50_percent_plus = 3;
+    bool completed_50_percent_plus = 3;
     bool completed_75_percent_plus = 4;
     bool completed_100_percent = 5;
   }
