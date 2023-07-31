@@ -28,28 +28,25 @@ message Video {
     description: "An Event Template for video ad events."
   };
 
-  // Measures the percentage of a video ad that was viewed.
-  message DigitalVideoCompletionStatus {
-    bool completed_0_percent_plus = 1;
-    bool completed_25_percent_plus = 2;
-    bool completed_50_percent_plus = 3;
-    bool completed_75_percent_plus = 4;
-    bool completed_100_percent = 5;
-  }
+  // These field measure the percentage of a video ad that was viewed.
+  // Should be set cumulatively. e.g. if the completed_50_percent_plus is true
+  // then it's an error if the completed_25_percent_plus and
+  // completed_0_percent_plus fields are not also true
+  bool completed_0_percent_plus = 1;
+  bool completed_25_percent_plus = 2;
+  bool completed_50_percent_plus = 3;
+  bool completed_75_percent_plus = 4;
+  bool completed_100_percent = 5;
 
-  message Viewability {
-    // More than 0% of the ad was displayed in the browser for more than
-    // 0 seconds.
-    bool viewable_0_percent_plus = 1;
-    // More than 50% of the ad was displayed in the browser for at least
-    // 2 continuous seconds.
-    // AKA Old MRC Viewability standard
-    bool viewable_50_percent_plus = 2;
-    // 100% of the ad was displayed in the browser for at least
-    // 2 continuous seconds.
-    // AKA New MRC Viewability standard
-    bool viewable_100_percent = 3;
-  }
-  Viewability viewability = 1;
-  DigitalVideoCompletionStatus digital_video_completion_status = 2;
+  // More than 0% of the ad was displayed in the browser for more than
+  // 0 seconds.
+  bool viewable_0_percent_plus = 6;
+  // More than 50% of the ad was displayed in the browser for at least
+  // 2 continuous seconds.
+  // AKA Old MRC Viewability standard
+  bool viewable_50_percent_plus = 7;
+  // 100% of the ad was displayed in the browser for at least
+  // 2 continuous seconds.
+  // AKA New MRC Viewability standard
+  bool viewable_100_percent = 8;
 }

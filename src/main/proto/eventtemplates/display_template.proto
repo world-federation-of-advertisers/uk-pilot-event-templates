@@ -28,17 +28,14 @@ message Display {
     description: "An Event Template for display ad events."
   };
 
-  message Viewability {
-    // More than 0% of the ad was displayed in the browser for more than
-    // 0 seconds.
-    bool viewable_0_percent_plus = 1;
-    // More than 50% of the ad was displayed in the browser for at least
-    // 1 continuous second.
-    // AKA MRC Viewability standard
-    bool viewable_50_percent_plus = 2;
-    // 100% of the ad was displayed in the browser for at least
-    // 1 continous second.
-    bool viewable_100_percent = 3;
-  }
-  Viewability viewability = 1;
+  // More than 0% of the ad was displayed in the browser for more than
+  // 0 seconds.
+  bool viewable_0_percent_plus = 1;
+  // More than 50% of the ad was displayed in the browser for at least
+  // 1 continuous second.
+  // AKA MRC Viewability standard
+  bool viewable_50_percent_plus = 2;
+  // 100% of the ad was displayed in the browser for at least
+  // 1 continous second.
+  bool viewable_100_percent = 3;
 }
