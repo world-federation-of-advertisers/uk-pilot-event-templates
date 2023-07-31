@@ -28,7 +28,6 @@ message Video {
     description: "An Event Template for video ad events."
   };
 
-  // These field measure the percentage of a video ad that was viewed.
   // This video ad was viewed 0 percent.
   bool completed_0_percent_plus = 1;
   // This video ad was viewed more than 25 percent. If this is true, then
