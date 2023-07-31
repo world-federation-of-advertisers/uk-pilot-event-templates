@@ -29,13 +29,21 @@ message Video {
   };
 
   // These field measure the percentage of a video ad that was viewed.
-  // Should be set cumulatively. e.g. if the completed_50_percent_plus is true
-  // then it's an error if the completed_25_percent_plus and
-  // completed_0_percent_plus fields are not also true
+  // This video ad was viewed 0 percent.
   bool completed_0_percent_plus = 1;
+  // This video ad was viewed more than 25 percent. If this is true, then
+  // completed_0_percent_plus must be true.
   bool completed_25_percent_plus = 2;
+  // This video ad was viewed more than 50 percent. If this is true, then
+  // completed_25_percent_plus and completed_0_percent_plus must be true.
   bool completed_50_percent_plus = 3;
+  // This video ad was viewed more than 75 percent. If this is true, then
+  // completed_50_percent_plus, completed_25_percent_plus and
+  // completed_0_percent_plus must be true.
   bool completed_75_percent_plus = 4;
+  // This video ad was viewed 100 percent. If this is true, then
+  // completed_75_percent_plus, completed_50_percent_plus,
+  // completed_25_percent_plus and completed_0_percent_plus must be true.
   bool completed_100_percent = 5;
 
   // More than 0% of the ad was displayed in the browser for more than
