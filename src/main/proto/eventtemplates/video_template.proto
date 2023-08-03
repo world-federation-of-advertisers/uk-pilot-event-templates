@@ -29,31 +29,55 @@ message Video {
   };
 
   // This video ad was viewed 0 percent.
-  bool completed_0_percent_plus = 1;
+  bool completed_0_percent_plus = 1
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Completed 0%+"
+      }];
   // This video ad was viewed more than 25 percent. If this is true, then
   // completed_0_percent_plus must be true.
-  bool completed_25_percent_plus = 2;
+  bool completed_25_percent_plus = 2
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Completed 25%+"
+      }];
   // This video ad was viewed more than 50 percent. If this is true, then
   // completed_25_percent_plus and completed_0_percent_plus must be true.
-  bool completed_50_percent_plus = 3;
+  bool completed_50_percent_plus = 3
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Completed 50%+"
+      }];
   // This video ad was viewed more than 75 percent. If this is true, then
   // completed_50_percent_plus, completed_25_percent_plus and
   // completed_0_percent_plus must be true.
-  bool completed_75_percent_plus = 4;
+  bool completed_75_percent_plus = 4
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Completed 75%+"
+      }];
   // This video ad was viewed 100 percent. If this is true, then
   // completed_75_percent_plus, completed_50_percent_plus,
   // completed_25_percent_plus and completed_0_percent_plus must be true.
-  bool completed_100_percent = 5;
+  bool completed_100_percent = 5
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Completed 100%"
+      }];
 
   // More than 0% of the ad was displayed in the browser for more than
   // 0 seconds.
-  bool viewable_0_percent_plus = 6;
+  bool viewable_0_percent_plus = 6
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Viewable 0%+"
+      }];
   // More than 50% of the ad was displayed in the browser for at least
   // 2 continuous seconds.
   // AKA Old MRC Viewability standard
-  bool viewable_50_percent_plus = 7;
+  bool viewable_50_percent_plus = 7
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Viewable 50%+"
+      }];
   // 100% of the ad was displayed in the browser for at least
   // 2 continuous seconds.
   // AKA New MRC Viewability standard
-  bool viewable_100_percent = 8;
+  bool viewable_100_percent = 8
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Viewable 100%"
+      }];
 }

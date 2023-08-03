@@ -30,12 +30,21 @@ message Display {
 
   // More than 0% of the ad was displayed in the browser for more than
   // 0 seconds.
-  bool viewable_0_percent_plus = 1;
+  bool viewable_0_percent_plus = 1
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Viewable 0%+"
+      }];
   // More than 50% of the ad was displayed in the browser for at least
   // 1 continuous second.
   // AKA MRC Viewability standard
-  bool viewable_50_percent_plus = 2;
+  bool viewable_50_percent_plus = 2
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Viewable 50%+"
+      }];
   // 100% of the ad was displayed in the browser for at least
   // 1 continous second.
-  bool viewable_100_percent = 3;
+  bool viewable_100_percent = 3
+      [(.wfa.measurement.api.v2alpha.template_field) = {
+        display_name: "Viewable 100%+"
+      }];
 }
