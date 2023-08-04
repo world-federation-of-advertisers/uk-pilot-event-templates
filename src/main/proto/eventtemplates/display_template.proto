@@ -23,7 +23,7 @@ option java_multiple_files = true;
 
 message Display {
   option (.wfa.measurement.api.v2alpha.event_template) = {
-    name: "Display"
+    name: "display"
     display_name: "Display Ad"
     description: "An Event Template for display ad events."
   };
