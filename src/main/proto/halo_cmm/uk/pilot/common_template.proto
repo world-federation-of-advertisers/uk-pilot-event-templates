@@ -34,17 +34,20 @@ message Common {
     FEMALE = 2;
   }
 
-  Sex sex = 1
-      [(.wfa.measurement.api.v2alpha.template_field) = { display_name: "Sex" }];
+  Sex sex = 1 [(.wfa.measurement.api.v2alpha.template_field) = {
+    display_name: "Sex"
+    population_attribute: true
+  }];
 
   enum AgeGroup {
     AGE_GROUP_UNSPECIFIED = 0;
-    AGE_18_TO_34 = 1;
-    AGE_35_TO_54 = 2;
-    AGE_55_PLUS = 3;
+    YEARS_16_TO_34 = 1;
+    YEARS_35_TO_54 = 2;
+    YEARS_55_PLUS = 3;
   }
 
   AgeGroup age_group = 2 [(.wfa.measurement.api.v2alpha.template_field) = {
     display_name: "Age Group"
+    population_attribute: true
   }];
 }
