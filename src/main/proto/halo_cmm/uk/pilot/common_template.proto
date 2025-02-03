@@ -25,7 +25,7 @@ message Common {
   option (.wfa.measurement.api.v2alpha.event_template) = {
     name: "common"
     display_name: "Origin Common Template"
-    description: "A common base template for Origin Event filtering."
+    description: "A common base template for Origin event filtering."
   };
 
   enum Sex {
