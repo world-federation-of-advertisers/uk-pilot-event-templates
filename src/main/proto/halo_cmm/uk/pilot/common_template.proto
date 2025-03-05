@@ -24,7 +24,30 @@ option java_multiple_files = true;
 message Common {
   option (.wfa.measurement.api.v2alpha.event_template) = {
     name: "common"
-    display_name: "Common Template"
-    description: "A common base template for Origin Event filtering."
+    display_name: "Origin Common Template"
+    description: "A common base template for Origin event filtering."
   };
+
+  enum Sex {
+    SEX_UNSPECIFIED = 0;
+    MALE = 1;
+    FEMALE = 2;
+  }
+
+  Sex sex = 1 [(.wfa.measurement.api.v2alpha.template_field) = {
+    display_name: "Sex"
+    population_attribute: true
+  }];
+
+  enum AgeGroup {
+    AGE_GROUP_UNSPECIFIED = 0;
+    YEARS_16_TO_34 = 1;
+    YEARS_35_TO_54 = 2;
+    YEARS_55_PLUS = 3;
+  }
+
+  AgeGroup age_group = 2 [(.wfa.measurement.api.v2alpha.template_field) = {
+    display_name: "Age Group"
+    population_attribute: true
+  }];
 }
