@@ -37,6 +37,9 @@ message Common {
   Sex sex = 1 [(.wfa.measurement.api.v2alpha.template_field) = {
     display_name: "Sex"
     population_attribute: true
+    reporting_features: FILTERABLE
+    reporting_features: GROUPABLE
+    version_added: 1
   }];
 
   enum AgeGroup {
@@ -49,5 +52,8 @@ message Common {
   AgeGroup age_group = 2 [(.wfa.measurement.api.v2alpha.template_field) = {
     display_name: "Age Group"
     population_attribute: true
+    reporting_features: FILTERABLE
+    reporting_features: GROUPABLE
+    version_added: 1
   }];
 }

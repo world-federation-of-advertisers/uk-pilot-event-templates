@@ -25,6 +25,10 @@ option java_package = "org.halo_cmm.uk.pilot";
 option java_multiple_files = true;
 
 message Event {
+  option (.wfa.measurement.api.v2alpha.event) = {
+    current_version: 1
+  };
+
   Common common = 1;
   Video video = 2;
   Display display = 3;

@@ -33,6 +33,8 @@ message Display {
   bool viewable_0_percent_plus = 1
       [(.wfa.measurement.api.v2alpha.template_field) = {
         display_name: "Viewable 0%+"
+        reporting_features: IMPRESSION_QUALIFICATION
+        version_added: 1
       }];
   // More than 50% of the ad was displayed in the browser for at least
   // 1 continuous second.
@@ -40,11 +42,15 @@ message Display {
   bool viewable_50_percent_plus = 2
       [(.wfa.measurement.api.v2alpha.template_field) = {
         display_name: "Viewable 50%+"
+        reporting_features: IMPRESSION_QUALIFICATION
+        version_added: 1
       }];
   // 100% of the ad was displayed in the browser for at least
   // 1 continous second.
   bool viewable_100_percent = 3
       [(.wfa.measurement.api.v2alpha.template_field) = {
         display_name: "Viewable 100%+"
+        reporting_features: IMPRESSION_QUALIFICATION
+        version_added: 1
       }];
 }
